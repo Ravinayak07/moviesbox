@@ -1,0 +1,24 @@
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #45e670;
+    padding: 1% 5%;
+    border-bottom: 2px solid red;
+
+}
+.navbar_logo {
+    width: 150px;
+
+    border-radius: 4px;
+}
+.navbar_button {
+    background-color: red;
+    color: whitesmoke;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+
+    border-radius: 4px;
+}

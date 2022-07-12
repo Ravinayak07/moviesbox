@@ -1,0 +1,46 @@
+.landingpageContent_container{
+    background-color: #3DED97;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingpageContent_title{
+    font-size: 50px;
+    font-weight: 700;
+}
+.landingpageContent_subtitle{
+    font-size: 30px;
+    font-weight: 700;
+     margin: 10px 0; /* top-down: 10px and horizontal: 0px */
+}
+.landingpageContent_desc{
+    font-size: 20px;
+    font-weight: 700px;
+    margin-bottom: 10px; /* becoz in subtitle we have given top-down margin */
+}
+.landingpageContent_input{
+
+    width: 450px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    
+}
+.landingpageContent_input > input {
+     height: 31px;
+     width: 300px;
+}
+
+.landingpageContent_input > button {
+    height: 37px;
+    width: 130px;
+    padding: 0 15px;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: 700;
+}
