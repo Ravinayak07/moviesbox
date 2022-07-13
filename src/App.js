@@ -1,6 +1,7 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LandingPage from "./Container/LandingPage/LandingPage.js";
+import SignInPage from './Container/SignInPage/SignInPage';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   const isuserLoggedin = false;
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={isuserLoggedin ? "" : <LandingPage /> } />
+        <Route path="/sign-in" element={<SignInPage /> } />
       </Routes>
       </div>
     </BrowserRouter>

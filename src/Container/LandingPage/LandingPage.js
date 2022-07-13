@@ -6,7 +6,8 @@ import LandingPageContent from "../../Components/LandingPageContent/LandingPagec
 function LandingPage() {
     return(
         <div className="landingpage_container">
-            <NavBar />
+             <NavBar />{/* here we not not sending any value for ShowSignInButton,
+             so it will become undefined and signin button will appear in the nav bar of landing page */}
             <LandingPageContent />
             
         </div>
