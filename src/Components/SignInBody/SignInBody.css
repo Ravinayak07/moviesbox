@@ -1,4 +1,4 @@
-.signinbody_container{
+.signin_body_container{
     background-color: #3ef49c;
     height: 90vh; 
     display: flex;
@@ -9,24 +9,24 @@
     exactly at the center of the page */
   
 }
-.siginbox_container{
+.signin_box_container{
      display: flex;
      flex-direction: column;
      background-color: #0acb4e97;
      padding: 50px 40px;
 }
-.signinbox_title{
+.signin_box_title{
     font-size: 28px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.siginbox_container > input, .siginbox_container > button {
+.signin_box_container > input, .signin_box_container > button {
     margin: 10px 0;
 }
 
-.siginbox_container > input{
+.signin_box_container > input{
     height: 40px;
     width: 300px;
     border-radius: 8px;
@@ -34,7 +34,7 @@
     padding: 0px 10px;
 }
 
-.siginbox_container > button{
+.signin_box_container > button{
    height: 35px;
    background-color: red;
    color: white;
@@ -44,17 +44,79 @@
    border-radius: 4px;
 }
 
-.signinbox_text {
+.signin_box_text {
     font-weight: 700;
     text-align: center;
     margin-top: 10px;
     color: black;
 }
 
-.signinbox_text > span {
+.signin_box_text > span {
     font-weight: 700;
     color: blue;
     text-decoration: none;
     cursor: pointer;
 }
+
+.signup_body_container{
+    background-color: #3ef49c;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*Horizontally Center*/
+    align-items: center;      /*Vertically Center*/
+    /* justify-content: center, align-items: center and height: 90vh makes the signup body appear
+    exactly at the center of the page */
+  
+}
+.signup_box_container{
+     display: flex;
+     flex-direction: column;
+     background-color: #95e90d97;
+     padding: 50px 40px;
+}
+.signup_box_title{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup_box_container > input, .signup_box_container > button {
+    margin: 10px 0;
+}
+
+.signup_box_container > input{
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    padding: 0px 10px;
+}
+
+.signup_box_container > button{
+   height: 35px;
+   background-color: red;
+   color: white;
+   font-weight: 700;
+   border: none;
+   cursor: pointer;
+   border-radius: 4px;
+}
+
+.signup_box_text {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.signup_box_text > span {
+    font-weight: 700;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 

@@ -14,7 +14,7 @@ function NavBar({ ShowSignInButton}) {
          <img className="navbar_logo" src={logo} alt="logo"/>
          {/* condition to remove signinbutton. If ShowSignInButton is false.It will 
          show nothing other wise shows the button */}
-         {ShowSignInButton === false ? " " : <button className="navbar_button" onClick={goToSignInPage}>Sign Up</button>}
+         {ShowSignInButton === false ? " " : <button className="navbar_button" onClick={goToSignInPage}>Sign In</button>}
         </div>
     )
 }
