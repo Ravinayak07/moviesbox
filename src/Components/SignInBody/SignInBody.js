@@ -45,14 +45,14 @@ const [showSignInBox, setshowSignInBox] = useState(true)
        // sign-up 
       <div className="signup_body_container">
         <div className="signup_box_container">
-        <p className="signup_box_title">Sign Up</p>
+        <p className="signup_box_title">{SIGN_IN_BODY_TEXT.SIGN_UP}</p>
         <input placeholder="Name" />
         <input placeholder="Email" />
         <input placeholder="Password" type="password" />
         <Button text={SIGN_IN_BODY_TEXT.SIGN_UP} />
         <Button text={SIGN_IN_BODY_TEXT.LOGIN_AS_GUEST_USER} />
         <p className="signup_box_text">
-          Already a member?<span onClick={()=>setshowSignInBoxAs(true)}>Sign In Now</span>
+          {SIGN_IN_BODY_TEXT.HAVE_AN_ACCOUNT}<span onClick={()=>setshowSignInBoxAs(true)}>{SIGN_IN_BODY_TEXT.SIGN_IN_NOW}</span>
         </p>
          </div>
         </div>

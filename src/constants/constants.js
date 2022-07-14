@@ -5,5 +5,8 @@ export const SIGN_IN_BODY_TEXT = {
     PASSWORD_PLACEHOLDER: "Password",
     LOGIN_AS_GUEST_USER: "Login as Guest User",
     NEW_TO_MOVIE_APP: "New to MovieApp?",
-    SIGN_UP_NOW: "Signup Now"
+    SIGN_UP_NOW: "Signup Now",
+    HAVE_AN_ACCOUNT: "Have an account?",
+    SIGN_IN_NOW: "Sign In Now"
+
 }
