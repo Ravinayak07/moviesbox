@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./SignInBody.css";
+import { SIGN_IN_BODY_TEXT } from "../../constants/constants";
+import Button from "../../Global/Button/Button";
 
 function SignInBody() {
 
@@ -27,13 +29,15 @@ const [showSignInBox, setshowSignInBox] = useState(true)
       // Sign in 
       <div className="signin_body_container">
         <div className="signin_box_container">
-          <p className="signin_box_title">Sign In</p>
-          <input placeholder="Email" />
-          <input placeholder="Password" type="password" />
-          <button>Sign In</button>
-          <button>Login as Guest User</button>
+          <p className="signin_box_title">{SIGN_IN_BODY_TEXT.SIGN_IN}</p>
+          <input placeholder={SIGN_IN_BODY_TEXT.EMAIL_PLACEHOLDER} />
+          <input placeholder={SIGN_IN_BODY_TEXT.PASSWORD_PLACEHOLDER}  type="password" />
+          <Button text={SIGN_IN_BODY_TEXT.SIGN_IN} />
+          <Button text={SIGN_IN_BODY_TEXT.LOGIN_AS_GUEST_USER} />
+          {/* <button>{SIGN_IN_BODY_TEXT.SIGN_IN}</button>
+          <button>{SIGN_IN_BODY_TEXT.LOGIN_AS_GUEST_USER}</button> */}
           <p className="signin_box_text">
-            New to MoviesBox? <span onClick={()=>setshowSignInBoxAs(false)}>Sign up Now</span>
+          {SIGN_IN_BODY_TEXT.NEW_TO_MOVIE_APP}{" "} <span onClick={()=>setshowSignInBoxAs(false)}>{SIGN_IN_BODY_TEXT.SIGN_UP_NOW}</span>
           </p>
         </div>
       </div>
@@ -45,8 +49,8 @@ const [showSignInBox, setshowSignInBox] = useState(true)
         <input placeholder="Name" />
         <input placeholder="Email" />
         <input placeholder="Password" type="password" />
-        <button>Sign Up</button>
-        <button>Login as Guest User</button>
+        <Button text={SIGN_IN_BODY_TEXT.SIGN_UP} />
+        <Button text={SIGN_IN_BODY_TEXT.LOGIN_AS_GUEST_USER} />
         <p className="signup_box_text">
           Already a member?<span onClick={()=>setshowSignInBoxAs(true)}>Sign In Now</span>
         </p>
