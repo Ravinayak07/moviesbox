@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     background-color: yellow;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .movies_rows > img{
