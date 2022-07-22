@@ -4,7 +4,7 @@ import logo from "../../images/logo.png";
 import Button from "../../Global/Button/Button";
 import { useNavigate } from "react-router-dom";
 
-function NavBar({ ShowSignInButton }) {
+function NavBar({ ShowSignInButton, showInputField }) {
   const navigate = useNavigate();
   function goToSignInPage() {
     navigate("/sign-in");
@@ -20,6 +20,10 @@ function NavBar({ ShowSignInButton }) {
       ) : (
         <Button text="Sign In" onClicking={goToSignInPage} />
       )}
+      
+      {showInputField && <input />}
+      {/* {showInputField ? <input /> : ""} */}
+      
     </div>
   );
 }

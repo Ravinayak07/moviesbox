@@ -8,14 +8,13 @@
 .movies_row_container{
     display: flex;
     align-items: center;
-    background-color: yellow;
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
 .movies_rows > img{
     /* width: 100px; */
-     height: 200px;  /*width will be automatically adjusted */
+     height: 300px;  /*width will be automatically adjusted */
      margin: 2px;
      transition: 0.5s;
      

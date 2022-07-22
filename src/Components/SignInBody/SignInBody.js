@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import "./SignInBody.css";
 import { SIGN_IN_BODY_TEXT } from "../../constants/constants";
 import Button from "../../Global/Button/Button";
+import {useNavigate} from "react-router-dom";
 
-function SignInBody() {
+function SignInBody({setIsUserLoggedIn}) {
+  const navigate = useNavigate();
 
 const [showSignInBox, setshowSignInBox] = useState(true)
 
@@ -19,7 +21,18 @@ const [showSignInBox, setshowSignInBox] = useState(true)
    setshowSignInBox(param)
   }
 
-  console.log("showSignInBox: ", showSignInBox)
+  function sign_up(){
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    setIsUserLoggedIn(true);
+    // navigate("/");
+  }
+  console.log("showSignInBox: ", showSignInBox);
+
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
  
 //  Initial value is given true so that first sign in box will appear
   return (
@@ -46,10 +59,10 @@ const [showSignInBox, setshowSignInBox] = useState(true)
       <div className="signup_body_container">
         <div className="signup_box_container">
         <p className="signup_box_title">{SIGN_IN_BODY_TEXT.SIGN_UP}</p>
-        <input placeholder="Name" />
-        <input placeholder="Email" />
-        <input placeholder="Password" type="password" />
-        <Button text={SIGN_IN_BODY_TEXT.SIGN_UP} />
+        <input placeholder="Name" value={name} onChange={e=>setName(e.target.value)} />
+        <input placeholder="Email" value={email} onChange={eve=>setEmail(eve.target.value)}/>
+        <input placeholder="Password" type="password" value={password} onChange={event=>setPassword(event.target.value)} />
+        <Button onClicking={sign_up} text={SIGN_IN_BODY_TEXT.SIGN_UP} />
         <Button text={SIGN_IN_BODY_TEXT.LOGIN_AS_GUEST_USER} />
         <p className="signup_box_text">
           {SIGN_IN_BODY_TEXT.HAVE_AN_ACCOUNT}<span onClick={()=>setshowSignInBoxAs(true)}>{SIGN_IN_BODY_TEXT.SIGN_IN_NOW}</span>
