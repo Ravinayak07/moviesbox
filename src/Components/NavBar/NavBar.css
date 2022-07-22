@@ -9,6 +9,11 @@
 }
 .navbar_logo {
     width: 150px;
-
     border-radius: 4px;
+}
+
+.navbar_input_field{
+    margin-right: 20px;
+    width: 200px;
+    height: 20px;
 }

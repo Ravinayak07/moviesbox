@@ -3,12 +3,20 @@ import "./NavBar.css";
 import logo from "../../images/logo.png";
 import Button from "../../Global/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase.js";
 
-function NavBar({ ShowSignInButton, showInputField }) {
+function NavBar({ ShowSignInButton, showInputField, isuserLoggedin, setIsUserLoggedIn }) {
   const navigate = useNavigate();
   function goToSignInPage() {
     navigate("/sign-in");
   }
+
+  function logOutTheUser() {
+    auth.signOut().then(() => {
+      setIsUserLoggedIn(false);
+    });
+  }
+
   return (
     <div className="navbar_container">
       <img className="navbar_logo" src={logo} alt="logo" />
@@ -20,10 +28,20 @@ function NavBar({ ShowSignInButton, showInputField }) {
       ) : (
         <Button text="Sign In" onClicking={goToSignInPage} />
       )}
-      
-      {showInputField && <input />}
-      {/* {showInputField ? <input /> : ""} */}
-      
+
+      {showInputField || isuserLoggedin ? (
+        <div>
+          {showInputField && <input className="navbar_input_field" />}
+          {/* {showInputField ? <input /> : ""} */}
+          {isuserLoggedin ? (
+            <Button text="Logout" onClicking={logOutTheUser} />
+          ) : (
+            ""
+          )}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

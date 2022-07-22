@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <Routes>
-        <Route path="/" element={isuserLoggedin ? <HomePage /> : <LandingPage /> } />
+        <Route path="/" element={isuserLoggedin ? <HomePage isuserLoggedin={isuserLoggedin} setIsUserLoggedIn={setIsUserLoggedIn} /> : <LandingPage /> } />
         <Route path="/sign-in" element={<SignInPage setIsUserLoggedIn={setIsUserLoggedIn} />  } />
   
       </Routes>
